@@ -6,8 +6,8 @@
 <h2>LOG IN</h2>
 <form method="post">
   <div>
-      <span>Email</span>
-      <input type="text" name="email" >
+      <span>Phone</span>
+      <input type="text" name="phone" >
   </div>
   <br/>
   <div>
@@ -17,7 +17,7 @@
    <br/>
    <div>
       <input type="submit" name="act" value="Login">
-      <p> Or by phone? <a href="login2.php"> Click here </a></p>
+      <p> Or by email? <a href="login.php"> Click here </a></p>
    </div>
    <p> Create new account? <a href="signup.php"> Sign Up </a></p>
    <p> Go back to Home ? <a href="index.php"> Home </a></p>
