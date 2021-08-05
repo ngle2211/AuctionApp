@@ -13,20 +13,16 @@
         <h2>CREATE AUCTION PRODUCT</h2>
         <table  cellspacing='5' cellpadding='5'>
             <tr>
-                <td>Item Name</td>
-                <td><input type="text" name="item" id="item"></td>
+                <td>Product Name</td>
+                <td><input type="text" name="prod_name" ></td>
             </tr>
             <tr>
                 <td>Minimum Price</td>
-                <td><input type="text" name="item" id="item"></td>
-            </tr>
-            <tr>
-                <td>Closing Time</td>
-                <td><input type="text" name="item" id="item"></td>
+                <td><input type="text" name="min_price"></td>
             </tr>
             <tr>
                 <td valign="top">Description</td>
-                <td><textarea name="description" id ="description" 
+                <td><textarea name="description"  
                 cols= "45" rows= "5" ></textarea></td>
             </tr>
             <tr>
