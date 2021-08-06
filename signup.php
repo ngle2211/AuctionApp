@@ -32,23 +32,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 
 			header("Location: login.php");
 			die;
-		}
-
-        elseif (!empty($phone) && !empty($password) && !is_numeric($phone)){
-            //save to database
-			$user_id = random_num(20);
-			$query = "insert into users (
-                user_id,email,phone, fname,lname,address,city,country,id_num,profilepic,password) 
-                values ('$user_id','$email','$phone','$fname','$lname','$address','$city','$country','$id_num','$profilepic','$password')";
-
-			mysqli_query($con, $query);
-
-			header("Location: login2.php");
-			die;
-        }
-
-        
-        else
+		}else
 		{
 			echo "Please enter some valid information!";
 		}
