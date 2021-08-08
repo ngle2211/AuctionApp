@@ -31,6 +31,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 			mysqli_query($con, $query);
 
 			header("Location: login.php");
+
 			die;
 		}else
 		{
@@ -102,6 +103,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
       <input type="submit" name="act" value="Sign up"required >
    </div>
    <p> Already have account ? <a href="login.php"> Log In </a></p>
-   <p> Go back to Home ? <a href="index.html"> Home </a></p>
+   <p> Wanna go back? <a href="index.html"> Click </a></p>
 </form>
 </html>

@@ -64,6 +64,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
       <input type="submit" name="act" value="Login">
    </div>
    <p> Create new account? <a href="signup.php"> Sign Up </a></p>
-   <p> Go back to Home ? <a href="index.html"> Home </a></p>
+   <p> Wanna go back ? <a href="index.html"> Click </a></p>
 </form>
 </html>

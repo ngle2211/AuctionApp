@@ -12,10 +12,9 @@ session_start();
 <html>
 <body>
     <h2>MENU</h2>
-    <br>
-	Hello <?php echo $user_data['fname'];  ?>. Welcome to the auction menu !
+	Hello <?php echo $user_data['fname'];  ?>. Here is the menu !
     <ul>
-        <li><a href = "create_auc.php">Create auction product </a> </li>
+        <li><a href = "create_auc.php">Create new auction product</a> </li>
         <br/>
         <li><a href = "view_auc.php">View auction product list</a></li>
     </ul>

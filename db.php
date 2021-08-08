@@ -5,9 +5,12 @@ $dbuser = "root";
 $dbpass = "";
 $dbname = "auction";
 
-if(!$con = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname))
-{
+$con = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 
-	die("Failed to connect!");
+if(mysqli_connect_errno())
+{
+	echo "Failed to connect!" . mysqli_connect_error();
+} else {
+	//echo "Database connected successfully";
 }
 ?>
