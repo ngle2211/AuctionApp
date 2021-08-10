@@ -16,7 +16,7 @@ if(isset($_POST['post'])){
     $result = mysqli_query($con, $sql);
     if ($result){
         echo "Post successfully!";
-        header('Location: create_auc.php?Post Successfully!');
+        header('Location: create_prod.php?Post Successfully!');
         exit();
     } else{
         echo "Failed to post!";
@@ -27,12 +27,12 @@ if(isset($_POST['post'])){
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Create auction</title>
+    <title>Create auction product</title>
 </head>
 
 <body>
     <form action="" method="POST" >
-        <h2>CREATE NEW AUCTION PRODUCT</h2>
+        <h2>CREATE AUCTION PRODUCT</h2>
         <table  cellspacing='5' cellpadding='5'>
             <tr>
                 <td>Product Name</td>
@@ -61,7 +61,7 @@ if(isset($_POST['post'])){
                  value="Post" ></td>
             </tr>
         </table>
-        <p>View auction product list? <a href = "view_auc.php">Click</a></p>
+        <p>View your product list? <a href = "view_prod.php">Click</a></p>
         <p> Go back to the Menu? <a href="menu.php"> Menu </a></p>
     </form>
 </body>
