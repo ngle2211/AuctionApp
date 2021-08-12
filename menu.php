@@ -18,7 +18,9 @@ session_start();
         <br/>
         <li><a href = "view_prod.php">View auction product list</a></li>
         <br/>
-        <li><a href = "create_auc.php">View open auction</a></li>
+        <li><a href = "view_auc.php">View open auction</a></li>
+        
+        
     </ul>
 
     <h3><a href="logout.php">Log out</a></h3>

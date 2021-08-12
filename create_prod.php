@@ -4,7 +4,6 @@ if(isset($_POST['post'])){
     //create database connection
     include "db.php";
     
-
     $prod_name = $_POST['prod_name'];
     $min_price = $_POST['min_price'];
     $closing_time = $_POST['closing_time'];
@@ -62,7 +61,7 @@ if(isset($_POST['post'])){
             </tr>
         </table>
         <p>View your product list? <a href = "view_prod.php">Click</a></p>
-        <p> Go back to the Menu? <a href="menu.php"> Menu </a></p>
+        <p> Go back to the menu? <a href="menu.php"> Menu </a></p>
     </form>
 </body>
 </html>

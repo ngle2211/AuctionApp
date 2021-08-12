@@ -7,7 +7,7 @@
 
 <body>
 <div>
-<h2>AUCTION PRODUCT BID INFORMATION</h2>
+<h2> VIEW AUCTION PRODUCT BID INFORMATION</h2>
 <table>
         <thead>
             <tr>
@@ -32,7 +32,7 @@
         ?>
        
 
-        <script>
+<script>
             // Set the date we're counting down to
 var countDownDate = new Date("<?php echo $row['closing_time'] ?>").getTime();
 

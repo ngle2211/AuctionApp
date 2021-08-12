@@ -15,9 +15,13 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
         $city = $_POST['city'];
         $country = $_POST['country'];
         $id_num = $_POST['id_num'];
-        $profilepic = $_POST['profilepic'];
-		$password = $_POST['password'];
+        $password = $_POST['password'];
 
+        $profilepic = $_FILES['profilepic']['name'];
+
+        $target = "upload/".basename($profilepic);
+        move_uploaded_file($_FILES['profilepic']['tmp_name'], $target);
+        
 
 		if(!empty($email) && !empty($password) && !is_numeric($email))
 		{
@@ -31,11 +35,11 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 			mysqli_query($con, $query);
 
 			header("Location: login.php");
-
+           
 			die;
 		}else
 		{
-			echo "Please enter some valid information!";
+			echo "<p style='color:red;'>Please enter some valid information!</p>";
 		}
 	}
 
@@ -46,9 +50,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 <html>
 <head>
 	<title>Signup</title>
+    
 </head>
-<h2>SIGN UP</h2>
-<form method="post">
+<h2>SIGN UP FORM</h2>
+<form action="signup.php" method="post">
   <div>
       <span>Email</span>
       <input type="email" name="email" required >
@@ -91,7 +96,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
   <br/>
   <div>
       <span>Profile Pic</span>
-      <input type="text" name="profilepic"required  >
+      <input type="file" name="profilepic"required  >
   </div>
   <br/>
   <div>
@@ -100,7 +105,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
    </div>
    <br/>
    <div>
-      <input type="submit" name="act" value="Sign up"required >
+      <input class="btn btn-danger" type="submit" name="act" value="Sign up"required >
    </div>
    <p> Already have account ? <a href="login.php"> Log In </a></p>
    <p> Wanna go back? <a href="index.html"> Click </a></p>

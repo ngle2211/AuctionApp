@@ -10,15 +10,16 @@
 </head>
 
 <body>
-    <h2>VIEW AUCTION PRODUCT LIST</h2>
+    <h2>VIEW YOUR AUCTION PRODUCT LIST</h2>
     <table>
         <thead>
             <tr>
-                <th colspan="2">Product ID</th>
-                <th colspan="2">Product name</th>
-                <th colspan="2">Description</th>
-                <th colspan="2">Closing time</th>
-                <th colspan="2">Action</th>
+                <th>Product ID</th>
+                <th>Product name</th>
+                <th>Closing time</th>
+                <th>Description</th>
+                <th>Minimum Price</th>
+                <th>Action</th>
             </tr>
         </thead>
         <?php
@@ -62,18 +63,19 @@
         </script>
         <tbody>
             <tr >
-                <td colspan="2"><?php echo $row['prod_id']; ?></td>
-                <td colspan="2"><?php echo $row['prod_name']; ?></td>
-                <td colspan="2"><?php echo $row['prod_desc']; ?></td>
-                <td colspan="2"><?php echo $row['closing_time']; ?></td>
-                <td colspan="2"><a href="bid_info.php?view=<?php echo $row['prod_id']; ?>">
+                <td><?php echo $row['prod_id']; ?></td>
+                <td><?php echo $row['prod_name']; ?></td>
+                <td><?php echo $row['closing_time']; ?></td>
+                <td><?php echo $row['prod_desc']; ?></td>
+                <td><?php echo $row['min_price']; ?></td>
+                <td><a href="bid_info.php?view=<?php echo $row['prod_id']; ?>">
                 <button type="button" class="btn btn-info">View Bid Info</button></a></td>
             </tr>
         </tbody>
         <?php
                 }
             } else {
-                echo 'Result Not Found!';
+                echo "<p style='color:red;'>The list is empty now!</p>";
             }
 
         ?>

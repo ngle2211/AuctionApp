@@ -47,8 +47,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 <html>
 <head>
 	<title>Login by email</title>
+	
 </head>
-<h2>LOGIN</h2>
+<h2>LOGIN FORM</h2>
 <form method="post">
   <div>
       <span>Email</span>
@@ -61,8 +62,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
    </div>
    <br/>
    <div>
-      <input type="submit" name="act" value="Login">
+      <input class="btn btn-danger" type="submit" name="act" value="Login">
    </div>
+   
    <p> Create new account? <a href="signup.php"> Sign Up </a></p>
    <p> Wanna go back ? <a href="index.html"> Click </a></p>
 </form>
