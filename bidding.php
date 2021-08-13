@@ -54,6 +54,7 @@ if(isset($_GET['bidnow'])){
         if(isset($_POST['bid'])){
             include 'db.php';
 
+            
             $prod_id = mysqli_real_escape_string($con,$_POST['prod_id']) ;
             $price = mysqli_real_escape_string($con,$_POST['price']) ;
 

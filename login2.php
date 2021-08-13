@@ -7,14 +7,14 @@ include("functions.php");
 if($_SERVER['REQUEST_METHOD'] == "POST")
 	{
 		//something was posted
-		$email = $_POST['email'];
+		$phone = $_POST['phone'];
 		$password = $_POST['password'];
 
 		if(!empty($email) && !empty($password) && !is_numeric($email))
 		{
 
 			//read from database
-			$query = "select * from users where email = '$email' limit 1";
+			$query = "select * from users where phone = '$phone' limit 1";
 			$result = mysqli_query($con, $query);
 
 			if($result)
@@ -34,10 +34,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 				}
 			}
 			
-			echo "<p style='color:red;'> Wrong email or password. Please try again! </p>";
+			echo "<p style='color:red;'> Wrong phone or password. Please try again! </p>";
 		}else
 		{
-			echo "<p style='color:red;'> Wrong email or password. Please try again! </p>";
+			echo "<p style='color:red;'> Wrong phone or password. Please try again! </p>";
 		}
 	}
 
@@ -46,14 +46,14 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login by email</title>
+	<title>Login by phone</title>
 	
 </head>
 <h2>LOGIN FORM</h2>
 <form method="post">
   <div>
-      <span>Email</span>
-      <input type="email" name="email" required >
+      <span>Phone</span>
+      <input type="text" name="phone" required >
   </div>
   <br/>
   <div>
@@ -64,7 +64,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
    <div>
       <input class="btn btn-danger" type="submit" name="act" value="Login">
    </div>
-   <p> Login by phone? <a href="login2.php"> Click </a></p>
+   <p> Login by email? <a href="login.php"> Click </a></p>
    <p> Create new account? <a href="signup.php"> Sign Up </a></p>
    <p> Wanna go back ? <a href="index.html"> Click </a></p>
 </form>

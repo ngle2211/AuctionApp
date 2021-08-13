@@ -1,6 +1,6 @@
 # AuctionApp
 
-first step: Open index.html '
+first step: Open index.php '
 then login with:
 s3753240@rmit.edu.vn
 Pass: 123456

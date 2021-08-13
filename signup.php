@@ -23,7 +23,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
         move_uploaded_file($_FILES['profilepic']['tmp_name'], $target);
         
 
-		if(!empty($email) && !empty($password) && !is_numeric($email))
+		if(!empty($email) && !empty($password) && !is_numeric($email) 
+        )
 		{
 
 			//save to database
@@ -96,7 +97,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
   <br/>
   <div>
       <span>Profile Pic</span>
-      <input type="file" name="profilepic"required  >
+      <input type="file" name="profilepic" required  >
   </div>
   <br/>
   <div>

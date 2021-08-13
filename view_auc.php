@@ -22,6 +22,7 @@
                 <th><a class="column_sort" data-order="desc" href="#" id="closing_time">Closing time</a></th>
                 <th>Description</th>
                 <th>Minimum Price</th>
+
                 <th>Action</th>
             </tr>
         </thead>
@@ -33,6 +34,8 @@
                     WHERE NOT user_id = '".$_SESSION['user_id']."'
                     ORDER BY closing_time ASC ";
             $result = mysqli_query($con,$sql);
+
+            
 
             if(mysqli_num_rows($result) > 0){
                 while($row = mysqli_fetch_assoc($result)){
@@ -46,6 +49,7 @@
                 <td><?php echo $row['closing_time']; ?></td>
                 <td><?php echo $row['prod_desc']; ?></td>
                 <td><?php echo $row['min_price']; ?></td>
+              
                 <td><a href="bidding.php?bidnow=<?php echo $row['prod_id']; ?>">
                 <button type="button"> Bid Now</button></a></td>
             </tr>
