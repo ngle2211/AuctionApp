@@ -12,7 +12,7 @@ session_start();
 <html>
 <body>
     <h2>MENU</h2>
-	Hello <?php echo $user_data['fname'];  ?>. Here is the menu !
+	Hello <?php echo $user_data['fname'] . " " . $user_data['lname'] ;  ?>. Here is the menu !
     <ul>
         <li><a href = "create_prod.php">Create new auction product</a> </li>
         <br/>
